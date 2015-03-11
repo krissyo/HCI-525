@@ -1,0 +1,52 @@
+*{
+  font-family:helvetica;
+}
+body{
+  background:#f7f7f7;
+}
+header{
+  text-align:center;
+}
+nav{
+  text-align:center;
+}
+article{
+  text-align:left;
+  float:left;
+  width:75%;
+}
+aside{
+  text-align:left;
+  float:right;
+  width:23%;
+  padding:1%;
+}
+section{
+  text-align:left;
+  float:right;
+  padding:1%;
+  width:23%;
+}
+footer{
+  clear:both;
+  text-align:center;
+}
+nav ul li{
+  text-decoration:none;
+  color:black;
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+a{
+  text-decoration:none;
+  color:black;
+}
+.animals{
+  height:200px;
+  width:200px;
+}
+table, th, td {
+   border: 1px solid black;
+   text-align:left;
+}

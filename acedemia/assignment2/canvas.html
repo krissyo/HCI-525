@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Assignment 2 - Canvas</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="style.css" media="screen">
+  </head>
+  <body>
+    <header>
+      <h1>The joys of HTML5</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href='index.html'>Home</a>
+        </li>
+        <li>
+          <a href='audio.html'>Audio</a>
+        </li>
+        <li>
+          <a href='canvas.html'>Canvas</a>
+        </li>
+        <li>
+          <a href='video.html'>Video</a>
+        </li>
+      </ul>
+    </nav>
+    <article>
+      <h2>HTML Elements - Canvas</h2>
+      <canvas id="canvas" width="640" height="480">A very cool entry into the JS1K challenge, shame your browser doesn't support it.</canvas>
+    </article>
+    <aside>
+      This is my ISC 325 assignment 2. I am enjoying experimenting with html5. This page is dedicated to the canvas functionality.
+      The canvas html5 feature is for displaying 2D shapes and bitmap images. The canvas can be controlled through javascript calls and is essentially like an art canvas.
+      You must create and/or insert content through a script tag at the bottom of the body - no code being rendered can be written inside the canvas tags.
+      Within the canvas tag it is best to make a note of the content being displayed incase a user is not using a browser which supports html5.
+      Width and height are needed to specify the dimensions. The canvas element is my favorite part of html5 as I feel it is innovative as it compeltely replaces flash and embedded objects.
+      It also allows mobile broswers to display the same content as desktop broswers.  
+    </aside>
+    <section>
+      <h2>About me</h2>
+      My name is Krissy and I am a 19 year old Information Technology student from Australia. I love making websites and experimenting with different designs.
+      You can contact me by visiting my website <a href='http://www.krissyofarrell.com.au'>here</a>
+    </section>
+    <footer>
+      Krissy O'Farrell - 2015
+    </footer>
+
+    <script>
+    var a = document.getElementById("canvas");
+    var c = canvas.getContext("2d");
+    var b = document.body;
+    function R(){return Math.random()}function F(i,n,r,f,t){c.fillStyle=t,c.fillRect(i,n,r,f)}for(W=a.width,H=a.height,U="#ccc",s=[],K=[],Z=[],S=function(i){D=H/2;var n=this;n.c=U,i&&(n.c="#"+i),n.m=function(i,c,r){i?(F(n.x,n.y+=6,n.w++,n.h++,n.c),n.f&&(n.w+=5),c?n.x+=3:n.x-=3,r&&(n.y-=12),n.y>H&&!r?n.r(1,50):n.y<-350&&n.r(1,99*R(),1)):(F(n.x,n.y,n.w,n.h,n.c),n.l>1?n.l>2?n.l>3?[n.x+=n.p,n.y+=n.q]:[n.x-=n.p,n.y-=n.q]:[n.x-=n.p,n.y+=n.q]:[n.x+=n.p,n.y-=n.q],n.p+=n.p/50,n.q+=n.q/50,n.f?n.w+=7:n.h=n.w+=.1,(n.x>W||n.x<0)&&n.r(),(n.y>H||n.y<0)&&n.r())},n.r=function(i,c,r){i?(n.w=n.h=4,n.x=W/2,n.y=r?D+150+c:D+c):n.c!=U?(n.w=n.h=110,n.l=n.p=n.f=2,n.q=10,n.x=W/2-45,n.y=D+150):(n.q=10*R(),n.p=10*R(),n.l=4*R(),n.y=D,n.x=W/2,n.w=n.h=0)}},i=0;99>i;i++)o=new S,o.r(),g=new S(986),g.r(1,3*i),i%2==0?[G=new S,G.r(1,i,1)]:[G=new S(468),G.r(),G.q=i],i%32==0&&(g.f=1),K[i]=G,Z[i]=g,s[i]=o;setInterval(function(){for(F(0,0,W,H,"#111"),i=0;99>i;i++)s[i].m(),i%2==0?Z[i].m(1):Z[i].m(1,1);for(i=0;99>i;i++)i%2!=0?K[i].m():K[i].m(1,0,1)},30);
+
+    </script>
+  </body>
+</html>
